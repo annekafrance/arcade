@@ -1,0 +1,8 @@
+var intersectEstate = Intersects(FeatureSetByName($map,"Eriswell 2 Sensitivity Map (Individual Source)"), $feature)
+var sensitivity = ""
+
+for (var f in intersectEstate){
+    sensitivity = concatenate(sensitivity,f.Sensitivity, ", ")
+}
+
+return sensitivity
